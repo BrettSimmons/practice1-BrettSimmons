@@ -1,0 +1,34 @@
+---
+title: 'Homework 3'
+author: "Brett Simmons"
+date: "2/10/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#### Problem 1 
+Team members: Brett Simmons, Nathan Catalano
+
+Links: https://github.com/BrettSimmons/practice1-BrettSimmons, https://github.com/nathancatalano/practice-1-nathancatalano
+
+Forked Repos: https://github.com/BrettSimmons/practice-1-nathancatalano
+
+You can make working with git/github easier by using it more often, using the ability to fork repositories so you don't overwrite the main one, and submitting pull requests to avoid confusion with updates.
+ 
+#### Problem 2 
+```{r}
+library(ggplot2)
+gap <- read.csv("gapminder-5060.csv")
+country.subset = c("United States")
+us_only = gap[gap$country %in% country.subset, ]
+
+ggplot(data = us_only, aes(x = lifeExp, y = gdpPercap)) + geom_point(aes(color = country, size = pop))
+```
+
+###    Problem 3
+Data science is a broad topic with many different roles and fields. A data scientist takes raw data, prepares it for analysis, 
+analyzes it, and then draws conclusions to solve a business problem. An example of what I consider data science to be can be found in an AWS case study of Domino’s Pizza. Domino's wanted to improve their delivery times and set themselves apart from their competition. Using AWS they created a data lake with key order information. They then used machine learning models to predict the likelihood that an order will be placed. Their goal was to have the pizza ready before the order was even placed. Over a week of testing one store averaged delivery times of under 5 minutes after using the system. They took existing data, analyzed it, ran models, and improved their company.
+![Domino's delivery](https://d1.awsstatic.com/case-studies/Dominos_031019__1830.858a45d28fb2879b938cec7e0961767fe7a8e695.jpg)
