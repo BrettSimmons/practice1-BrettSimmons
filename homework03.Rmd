@@ -28,10 +28,9 @@ us_only = gap[gap$country %in% country.subset, ]
 ggplot(data = us_only, aes(x = lifeExp, y = gdpPercap)) + geom_point(aes(color = country, size = pop))
 
 library(ggplot2)
-gapminder_5060
 A=c("Australia")
-gapminder2=gapminder_5060[gapminder_5060$country %in% A,]
-ggplot(gapminder2, aes(x=lifeExp, y=gdpPercap))+geom_point()
+gap2=gap[gap$country %in% A,]
+ggplot(gap2, aes(x=lifeExp, y=gdpPercap))+geom_point(aes(color = country, size = pop))
 ```
 
 ###    Problem 3
